@@ -240,7 +240,15 @@
     nombre = $('#nombre').val();
     descripcion = $('#descripcion').val();
     imgUrl = $('#imgUrl').val();
-      alert(nombre + ' ' + descripcion + ' ' + imgUrl);
+
+    ref.set({
+      nombre: {
+        nombre: nombre,
+        descripcion: descripcion,
+        imgUrl: imgUrl
+      }
+    });
+    alert('Hecho' + nombre + ' ' + descripcion + ' ' + imgUrl);
   });
 
 
