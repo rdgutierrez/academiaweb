@@ -235,13 +235,13 @@
   var database = firebase.database();
   console.log(firebase);
 
-  var ref = firebase.database().ref.child('cursos');
+  var ref = firebase.database().ref().child('cursos');
   console.log(ref);
   var nombreField = '';
   var descripcionField = '';
   var imgUrlField = '';
   var formatolField = '';
-  
+
   $('#guardar').click(function(){
     nombreField = $('#nombre').val();
     descripcionField = $('#descripcion').val();
