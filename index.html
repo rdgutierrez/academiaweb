@@ -103,6 +103,10 @@
           <br><br>
           <input type="text" class="form-control" id="imgUrl" name="imgUrl" value="">
           <br><br>
+          <select class="" id="formato" name="formato">
+            <option value="Online">Online</option>
+          </select>
+          <br><br>
           <a href="#" class="btn btn-success" id="guardar">Guardar Curso</a>
           </form>
         </div>
@@ -240,11 +244,15 @@
     nombreField = $('#nombre').val();
     descripcionField = $('#descripcion').val();
     imgUrlField = $('#imgUrl').val();
+    formatoField = $('#formato').change(function(){
+      $('select[id=formato]').val();
+    });
 
     ref.set({
       nombreField: {
         nombre: nombreField,
         descripcion: descripcionField,
+
         imgUrl: imgUrlField
       }
     });
