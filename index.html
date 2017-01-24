@@ -103,7 +103,7 @@
           <br><br>
           <input type="text" class="form-control" id="imgUrl" name="imgUrl" value="">
           <br><br>
-          <a href="#" class="btn btn-success">Guardar Curso</a>
+          <a href="#" class="btn btn-success" id="guardar">Guardar Curso</a>
           </form>
         </div>
 
@@ -233,6 +233,15 @@
 
   var ref = firebase.database().ref('cursos');
   console.log(ref);
+  var nombre = '';
+  var descripcion = '';
+  var imgUrl = '';
+  $('#guardar').click(function(){
+    nombre = $('#nombre').text();
+    descripcion = $('#descripcion').text();
+    imgUrl = $('#imgUrl').text();
+  });
+  console.log(nombre + ' ' + descripcio + ' ' + imgUrl);
 
 </script>
 
