@@ -237,10 +237,10 @@
   var descripcion = '';
   var imgUrl = '';
   $('#guardar').click(function(){
-    nombre = $('#nombre').text();
-    descripcion = $('#descripcion').text();
-    imgUrl = $('#imgUrl').text();
-      console.log(nombre + ' ' + descripcion + ' ' + imgUrl);
+    nombre = $('#nombre').value();
+    descripcion = $('#descripcion').value();
+    imgUrl = $('#imgUrl').value();
+      alert(nombre + ' ' + descripcion + ' ' + imgUrl);
   });
 
 
