@@ -233,19 +233,19 @@
 
   var ref = firebase.database().ref('cursos');
   console.log(ref);
-  var nombre = '';
-  var descripcion = '';
-  var imgUrl = '';
+  var nombreField = '';
+  var descripcionField = '';
+  var imgUrlField = '';
   $('#guardar').click(function(){
-    nombre = $('#nombre').val();
-    descripcion = $('#descripcion').val();
-    imgUrl = $('#imgUrl').val();
+    nombreField = $('#nombre').val();
+    descripcionField = $('#descripcion').val();
+    imgUrlField = $('#imgUrl').val();
 
     ref.set({
       nombre: {
-        nombre: nombre,
-        descripcion: descripcion,
-        imgUrl: imgUrl
+        nombre: nombreField,
+        descripcion: descripcionField,
+        imgUrl: imgUrlField
       }
     });
     alert('Hecho' + nombre + ' ' + descripcion + ' ' + imgUrl);
