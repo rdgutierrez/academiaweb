@@ -280,7 +280,7 @@
    console.log("Error: " + error.code);
 });
 
-   ref.on("value", function(element) {
+   ref.on("value", function(snapshot) {
   snapshot.forEach(function(child) {
     console.log(child.key + ': ' + child.val());
     var tr = document.createElement('tr');
