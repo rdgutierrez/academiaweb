@@ -88,7 +88,9 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <h3>Resultados de Cursos</h3>
-          <p id="result"></p>
+          <table class="table table-striped">
+
+          </table>
           <hr>
         </div>
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -258,7 +260,19 @@
     $('#nombre').val('');
         $('#nombre').val('');
         $('#descripcion').val('');
+        $('#imgUrl').val('');
+        var table = $('td')[0];
+   var showContent = function(){
+     ref.on("child_added", function(child){
+       console.log(child.key+': '+child.val());
+       var tr = document.createElement('tr');
+       var td = document.createElement('td');
+       td.innerText = child.val().nombre + "---" + JOSN.stringify(child.val());
+       tr.appendChild(td);
+       table.appendVhild(tr);
 
+     });
+   }
 
     alert('Hecho');
   });
