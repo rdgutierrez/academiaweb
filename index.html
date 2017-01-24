@@ -235,7 +235,7 @@
   var database = firebase.database();
   console.log(firebase);
 
-  var ref = firebase.database().ref('cursos');
+  var ref = firebase.database().ref.child('cursos');
   console.log(ref);
   var nombreField = '';
   var descripcionField = '';
@@ -248,15 +248,15 @@
       $('select[id=formato]').val();
     });
 
-    ref.set({
-      nombreField: {
+    ref.push({
+
         nombre: nombreField,
         descripcion: descripcionField,
-
+        formato: formatoField,
         imgUrl: imgUrlField
-      }
+    
     });
-    alert('Hecho' + nombreField + ' ' + descripcionField + ' ' + imgUrlField);
+    alert('Hecho' + nombreField + ' ' + descripcionField + ' ' + formatoField + ' ' + imgUrlField);
   });
 
 
