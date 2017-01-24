@@ -282,7 +282,7 @@
 
    ref.on("value", function(element) {
   snapshot.forEach(function(child) {
-    console.log(child.key+': '+child.val());
+    console.log(child.key + ': ' + child.val());
     var tr = document.createElement('tr');
     var td = document.createElement('td');
     td.innerText = child.val().nombre + " --- " + JSON.stringify(child.val());
