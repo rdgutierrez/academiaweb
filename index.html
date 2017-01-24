@@ -240,6 +240,8 @@
   var nombreField = '';
   var descripcionField = '';
   var imgUrlField = '';
+  var formatolField = '';
+  
   $('#guardar').click(function(){
     nombreField = $('#nombre').val();
     descripcionField = $('#descripcion').val();
@@ -249,12 +251,10 @@
     });
 
     ref.push({
-
         nombre: nombreField,
         descripcion: descripcionField,
         formato: formatoField,
         imgUrl: imgUrlField
-    
     });
     alert('Hecho' + nombreField + ' ' + descripcionField + ' ' + formatoField + ' ' + imgUrlField);
   });
