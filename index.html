@@ -275,7 +275,7 @@
    }
    showContent(); */
    ref.on("value", function(snapshot) {
-   console.log(snapshot.val());
+   console.log(JSON.stringify(snapshot.val()));
 }, function (error) {
    console.log("Error: " + error.code);
 });
