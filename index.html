@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Code Team Miranda</title>
+    <title>Curso Wordpress Venezuela | Academia Web</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html">Academia Web</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -277,7 +277,7 @@
    showContent(); */
    ref.on("value", function(snapshot) {
    console.log(JSON.stringify(snapshot.val()));
-   $('#resultado').text(snapshot.val());
+   $('#resultado').text(snapshot.name());
 }, function (error) {
    console.log("Error: " + error.code);
 });
